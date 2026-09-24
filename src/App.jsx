@@ -7,7 +7,7 @@ import {
 import Layout from "./components/Layout";
 
 import Home from "./pages/Home";
-import About from "./pages/about";
+import About from "./pages/About";
 import Scope from "./pages/Scope";
 import Project from "./pages/Project";
 import Resources from "./pages/Resources";
