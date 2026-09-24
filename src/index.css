@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ==================================
+   GLOBAL CSS
+================================== */
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================================
+   RESET
+================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: #ffffff;
+  color: #111111;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==================================
+   SELECTION
+================================== */
+
+::selection {
+  background: #d90429;
+  color: #ffffff;
+}
+
+/* ==================================
+   FOCUS
+================================== */
+
+:focus-visible {
+  outline: 2px solid #d90429;
+  outline-offset: 3px;
+}

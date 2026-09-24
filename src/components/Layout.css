@@ -1,0 +1,1044 @@
+/* =========================================================
+   TRANSPRO ENGINEERING
+   FULL BLUE / NAVY THEME
+   ========================================================= */
+
+:root {
+  --bright-blue: #008BC5;
+  --primary-blue: #004F75;
+  --dark-navy: #00273D;
+  --darkest: #010F19;
+
+  --white: #ffffff;
+  --soft-white: #e8f5fa;
+  --muted-white: #b7cbd5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   FIXED / ALWAYS VISIBLE
+   ========================================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  z-index: 99999;
+
+  background:
+    linear-gradient(
+      110deg,
+      #010F19 0%,
+      #00273D 35%,
+      #004F75 72%,
+      #006B91 100%
+    );
+
+  border-bottom:
+    1px solid
+    rgba(0, 139, 197, 0.55);
+
+  box-shadow:
+    0 5px 25px
+    rgba(1, 15, 25, 0.35);
+}
+
+
+/* Bright top line */
+
+.site-header::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #008BC5,
+      #38BCE8,
+      #008BC5
+    );
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+   ========================================================= */
+
+.nav-container {
+  width: 92%;
+  max-width: 1400px;
+
+  height: 80px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND
+   LOGO + COMPANY NAME
+   ========================================================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+
+  height: 100%;
+}
+
+.brand-logo {
+  display: block;
+
+  width: auto;
+
+  height: 36px;
+
+  max-width: 175px;
+
+  object-fit: contain;
+}
+
+
+/* COMPANY NAME */
+
+.company-name {
+  display: block;
+
+  max-width: 260px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.15px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.main-nav {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 34px;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-link {
+  position: relative;
+
+  padding: 10px 2px;
+
+  color: var(--muted-white);
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 1px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--bright-blue);
+
+  border-radius: 10px;
+
+  transition:
+    width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.nav-contact {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 0 19px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #008BC5,
+      #006C99
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.20);
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 16px
+    rgba(0,139,197,0.25);
+
+  transition:
+    all 0.25s ease;
+}
+
+.nav-contact:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px
+    rgba(0,139,197,0.40);
+}
+
+.contact-arrow {
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.nav-contact:hover .contact-arrow {
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 43px;
+  height: 43px;
+
+  padding: 0;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.25);
+
+  border-radius: 8px;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 21px;
+  height: 2px;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  transition:
+    all 0.25s ease;
+}
+
+.menu-toggle.menu-active {
+  border-color: var(--bright-blue);
+
+  background:
+    rgba(0,139,197,0.25);
+}
+
+.menu-toggle.menu-active span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.menu-toggle.menu-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.menu-active span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   MAIN
+   IMPORTANT:
+   HEADER FIXED SO ADD TOP SPACE
+   ========================================================= */
+
+.main-content {
+  width: 100%;
+
+  min-height: 60vh;
+
+  padding-top: 80px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  position: relative;
+
+  margin-top: 80px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #010F19 0%,
+      #00273D 40%,
+      #004F75 75%,
+      #010F19 100%
+    );
+
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: -140px;
+  right: -100px;
+
+  width: 380px;
+  height: 380px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,139,197,0.25),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FOOTER TOP
+   ========================================================= */
+
+.footer-top {
+  position: relative;
+
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 65px 0 50px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 50px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
+
+.footer-brand {
+  max-width: 340px;
+}
+
+.footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.footer-logo-image {
+  width: auto;
+
+  height: 30px;
+
+  max-width: 155px;
+
+  object-fit: contain;
+}
+
+.footer-company-name {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  max-width: 210px;
+}
+
+.footer-description {
+  margin: 22px 0;
+
+  color:
+    rgba(255,255,255,0.67);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER REGISTRATION INFO
+   Est. year / GSTIN / PAN
+   ========================================================= */
+
+.footer-reg-info {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0 0 22px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+}
+
+.footer-reg-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.footer-socials {
+  display: flex;
+
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.22);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  transition:
+    all 0.25s ease;
+}
+
+.footer-socials a:hover {
+  background: var(--bright-blue);
+
+  border-color: var(--bright-blue);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-column h4 {
+  position: relative;
+
+  margin: 0 0 12px;
+
+  padding-bottom: 9px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.footer-column h4::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 30px;
+  height: 2px;
+
+  background: var(--bright-blue);
+}
+
+.footer-column a,
+.footer-column p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.65);
+
+  font-size: 14px;
+
+  transition:
+    all 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: var(--bright-blue);
+
+  padding-left: 4px;
+}
+
+.footer-address {
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 21px 0;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.50);
+
+  font-size: 13px;
+}
+
+.footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.footer-legal a,
+.footer-location {
+  color:
+    rgba(255,255,255,0.50);
+
+  font-size: 13px;
+}
+
+.footer-legal a:hover {
+  color: var(--bright-blue);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .company-name {
+    max-width: 210px;
+
+    font-size: 13px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .main-nav {
+    gap: 20px;
+  }
+
+  .footer-top {
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    height: 68px;
+  }
+
+  .nav-container {
+    width: 92%;
+
+    height: 68px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-logo {
+    height: 30px;
+
+    max-width: 140px;
+  }
+
+  .company-name {
+    max-width: 145px;
+
+    font-size: 11px;
+
+    line-height: 1.15;
+
+    white-space: normal;
+  }
+
+
+  /* MENU BUTTON */
+
+  .menu-toggle {
+    display: flex;
+  }
+
+
+  /* =====================================================
+     MOBILE DRAWER
+     FULL BLUE THEME
+     ===================================================== */
+
+  .main-nav {
+    position: fixed;
+
+    top: 68px;
+
+    right: -100%;
+
+    width: 100%;
+    max-width: 100%;
+
+    height:
+      calc(100vh - 68px);
+
+    padding: 30px 23px;
+
+    background:
+      linear-gradient(
+        180deg,
+        #00273D 0%,
+        #004F75 58%,
+        #010F19 100%
+      );
+
+    border-left: none;
+
+    isolation: isolate;
+
+    box-shadow:
+      -12px 0 35px
+      rgba(1,15,25,0.50);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 25px;
+
+    overflow-y: auto;
+
+    transition:
+      right 0.35s
+      cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Animated gradient edge running down the left side of the
+     drawer — cycles through the brand blues for a "trending"
+     glowing accent instead of a flat static border. */
+  .main-nav::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+      linear-gradient(
+        180deg,
+        #38BCE8 0%,
+        var(--bright-blue) 30%,
+        #7fe0ff 55%,
+        var(--bright-blue) 80%,
+        #38BCE8 100%
+      );
+
+    background-size: 100% 220%;
+
+    box-shadow:
+      0 0 16px rgba(0, 139, 197, 0.85),
+      0 0 32px rgba(56, 188, 232, 0.45);
+
+    animation: drawerEdgeFlow 3.5s linear infinite;
+
+    pointer-events: none;
+  }
+
+  @keyframes drawerEdgeFlow {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 0 -220%;
+    }
+  }
+
+  .main-nav.open {
+    right: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .main-nav::before {
+      animation: none;
+    }
+  }
+
+
+  /* MOBILE NAV LINKS */
+
+  .nav-links {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 3px;
+  }
+
+  .nav-link {
+    display: block;
+
+    padding: 15px 8px;
+
+    color:
+      rgba(255,255,255,0.72);
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.12);
+
+    font-size: 16px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    padding-left: 14px;
+
+    color: #ffffff;
+
+    background:
+      rgba(0,139,197,0.25);
+
+    border-left:
+      3px solid
+      var(--bright-blue);
+
+    border-radius: 4px;
+  }
+
+  .nav-contact {
+    width: 100%;
+  }
+
+
+  /* MAIN TOP SPACE */
+
+  .main-content {
+    padding-top: 68px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-top {
+    width: 90%;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px 25px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    width: 90%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    width: 90%;
+  }
+
+  .brand-logo {
+    height: 28px;
+
+    max-width: 125px;
+  }
+
+  .company-name {
+    max-width: 125px;
+
+    font-size: 10px;
+  }
+
+  .menu-toggle {
+    width: 41px;
+    height: 41px;
+  }
+
+  .main-nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+}
